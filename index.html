@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Mhr</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: grey;
+        }
+        label{
+            color: black;
+        }
+        input{
+            color: red;
+        }
+
+    </style>
+    <script>
+        function m(){
+            var wiek = document.getElementById("wiek").value;
+            var waga = document.getElementById("waga").value;
+            document.getElementById("wynik").innerHTML=210 - (0.5* wiek) - (0.022 * waga) + 4;
+        }
+        function k(){
+            var wiek = document.getElementById("wiek").value;
+            var waga = document.getElementById("waga").value;
+            document.getElementById("wynik").innerHTML=210 - (0.5* wiek) - (0.022 * waga);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Oblicz Mhr</h1>
+    <label for "wiek">Podaj wiek:</label>
+    <input type="nuber" id="wiek" dir="rtl">
+    <br>
+    <label for "waga">Podaj wagę:</label>
+    <input type="nuber" id="waga" dir="rtl">
+    <br>
+    <input type="button" value="MĘŻCZYZNA" onclick="m()">
+    <input type="button" value="KOBIETA" onclick="k()">
+    <div id="wynik">Wynik MHR</div>
+
+
+
+</body>
+</html>
